@@ -20,7 +20,7 @@ namespace DXWebAsoc.DAL.CORE
         /// Create:
         /// </summary>
         /// <param name="pObject"></param>        
-        public void Create(CObject pObject)
+        public void Create(Entity pObject)
         {
             // Execute Instruction
             using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
@@ -38,9 +38,9 @@ namespace DXWebAsoc.DAL.CORE
                         (idDivision, division, descripcion) 
                         VALUES (@idDivision, @division, @despcripcion)";
                 // Set Parameters: @ for inner parameters into SQL statement 
-                command.Parameters.AddWithValue("@idDivision", ((pObject) as CDivision).IdDivision);
-                command.Parameters.AddWithValue("@division", ((pObject) as CDivision).Division);
-                command.Parameters.AddWithValue("@descripcion", ((pObject) as CDivision).Descripcion);
+                command.Parameters.AddWithValue("@idDivision", ((pObject) as CUsuario).IdDivision);
+                command.Parameters.AddWithValue("@division", ((pObject) as CUsuario).Division);
+                command.Parameters.AddWithValue("@descripcion", ((pObject) as CUsuario).Descripcion);
                 // Set sql instruction
                 command.CommandText = sql;
                 // Execute
@@ -54,10 +54,10 @@ namespace DXWebAsoc.DAL.CORE
         /// </summary>
         /// <param name="pId"></param>
         /// <returns></returns>        
-        public CObject ReadById(CObject pObject) 
+        public Entity ReadById(Entity pObject) 
         {
             // Object
-            CObject oCObject = null;
+            Entity oCObject = null;
             // Execute Instruction
             using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
             {                
@@ -74,7 +74,7 @@ namespace DXWebAsoc.DAL.CORE
                 // SQL Instruction
                 string sql = @"SELECT * FROM DIVISION WHERE idDivision = @idDivision";
                 // Set Parameters
-                command.Parameters.AddWithValue("@idDivision",((pObject) as CDivision).IdDivision);
+                command.Parameters.AddWithValue("@idDivision",((pObject) as CUsuario).IdDivision);
                 // Set sql instruction
                 command.CommandText = sql;
                 // Execute
@@ -97,10 +97,10 @@ namespace DXWebAsoc.DAL.CORE
         /// Read All:
         /// </summary>
         /// <returns></returns>        
-        public List<CObject> ReadAll() 
+        public List<Entity> ReadAll() 
         {
             // List
-            List<CObject> objCollection = new List<CObject>();
+            List<Entity> objCollection = new List<Entity>();
             // Execute Instruction
             using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
             {
@@ -128,7 +128,7 @@ namespace DXWebAsoc.DAL.CORE
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        CObject oCObject = new CDivision();
+                        Entity oCObject = new CUsuario();
                         oCObject = this.PopulateObject(dr);
                         objCollection.Add(oCObject);
                     }
@@ -142,7 +142,7 @@ namespace DXWebAsoc.DAL.CORE
         /// Update:
         /// </summary>
         /// <param name="pObject"></param>        
-        public void Update(CObject pObject) 
+        public void Update(Entity pObject) 
         {
             // Execute Instruction
             using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
@@ -163,7 +163,7 @@ namespace DXWebAsoc.DAL.CORE
                                 WHERE
                                     idDivsion = @idDivision;";
                 // Set Parameters: @ for inner parameters into SQL statement 
-                command.Parameters.AddWithValue("@idDivision", ((pObject) as CDivision).IdDivision);                
+                command.Parameters.AddWithValue("@idDivision", ((pObject) as CUsuario).IdDivision);                
                 // Set sql instruction
                 command.CommandText = sql;
                 // Execute
@@ -176,7 +176,7 @@ namespace DXWebAsoc.DAL.CORE
         /// Delete
         /// </summary>
         /// <param name="pObject"></param>        
-        public void Delete(CObject pObject) 
+        public void Delete(Entity pObject) 
         {
             // Execute Instruction
             using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
@@ -194,7 +194,7 @@ namespace DXWebAsoc.DAL.CORE
                                 WHERE
                                     idDivsion = @idDivision;";
                 // Set Parameters: @ for inner parameters into SQL statement 
-                command.Parameters.AddWithValue("@idDivision", ((pObject) as CDivision).IdDivision);
+                command.Parameters.AddWithValue("@idDivision", ((pObject) as CUsuario).IdDivision);
                 // Set sql instruction
                 command.CommandText = sql;
                 // Execute
@@ -208,10 +208,10 @@ namespace DXWebAsoc.DAL.CORE
         /// </summary>
         /// <param name="pObject"></param>
         /// <returns></returns>        
-        public bool Exists(CObject pObject)
+        public bool Exists(Entity pObject)
         {
             // Object
-            CObject oCObject = this.ReadById(pObject);
+            Entity oCObject = this.ReadById(pObject);
             // If not is null then true
             if (oCObject!=null)
             {
@@ -232,9 +232,9 @@ namespace DXWebAsoc.DAL.CORE
         /// </summary>
         /// <param name="dr"></param>
         /// <returns></returns>        
-        public CObject PopulateObject(DataRow dr)
+        public Entity PopulateObject(DataRow dr)
         {
-            CDivision oCObject = new CDivision();
+            CUsuario oCObject = new CUsuario();
             oCObject.IdDivision = Convert.ToInt32(dr["idDivision"]);
             // Checking for NULL
             if (dr["division"] != DBNull.Value)

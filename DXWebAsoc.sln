@@ -24,6 +24,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXWebAsoc.DAL.DS", "DXWebAsoc.DAL.DS\DXWebAsoc.DAL.DS.csproj", "{84EF9F30-DFD5-4FD9-951F-DF8C8FC6BCE9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXWebAsoc.BusinessLogic", "DXWebAsoc.BusinessLogic\DXWebAsoc.BusinessLogic.csproj", "{DE530DBE-EEA8-4E58-8B2E-6FABF8EAE24B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F3775016-1804-4120-AB7D-CB68F84F288C} = {F3775016-1804-4120-AB7D-CB68F84F288C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{2E475058-35B7-4504-B9E8-D2C03F5D1A46}"
 EndProject
@@ -31,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{5CE0
 	ProjectSection(SolutionItems) = preProject
 		..\Tarea Calidad\sp_Base_Datos_Eventos.sql = ..\Tarea Calidad\sp_Base_Datos_Eventos.sql
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "WcfService\WcfService.csproj", "{F3775016-1804-4120-AB7D-CB68F84F288C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +67,10 @@ Global
 		{2E475058-35B7-4504-B9E8-D2C03F5D1A46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E475058-35B7-4504-B9E8-D2C03F5D1A46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E475058-35B7-4504-B9E8-D2C03F5D1A46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3775016-1804-4120-AB7D-CB68F84F288C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3775016-1804-4120-AB7D-CB68F84F288C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3775016-1804-4120-AB7D-CB68F84F288C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3775016-1804-4120-AB7D-CB68F84F288C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,5 +83,6 @@ Global
 		{DE530DBE-EEA8-4E58-8B2E-6FABF8EAE24B} = {CE6994B4-D077-4311-8569-4EFC01AC1413}
 		{2E475058-35B7-4504-B9E8-D2C03F5D1A46} = {5F54B63A-F418-4120-84F2-774339DD7EEC}
 		{5CE0BE61-C85B-4824-A968-ABDD94E573C0} = {5F54B63A-F418-4120-84F2-774339DD7EEC}
+		{F3775016-1804-4120-AB7D-CB68F84F288C} = {95FB6EA5-F8BB-4615-A92A-E93E1988A80A}
 	EndGlobalSection
 EndGlobal

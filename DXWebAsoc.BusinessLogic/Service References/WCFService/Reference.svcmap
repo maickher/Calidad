@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3dbb020b-2947-4b1d-8e2b-4ddf236771f3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58932/AsocService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AsocService.xsd" MetadataType="Schema" ID="26c27714-30d4-40cd-94ed-76bce066075e" SourceId="1" SourceUrl="http://localhost:58932/AsocService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AsocService1.xsd" MetadataType="Schema" ID="933abb37-0453-4037-a6ec-59df8dc863ec" SourceId="1" SourceUrl="http://localhost:58932/AsocService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AsocService.wsdl" MetadataType="Wsdl" ID="5b996d37-49b5-4492-8d36-d3302d4611b1" SourceId="1" SourceUrl="http://localhost:58932/AsocService.svc?wsdl" />
+    <MetadataFile FileName="AsocService2.xsd" MetadataType="Schema" ID="925e1e27-4905-4ecd-b3b4-6edf0ad3418d" SourceId="1" SourceUrl="http://localhost:58932/AsocService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AsocService3.xsd" MetadataType="Schema" ID="82553c12-9e0d-4d5c-a556-a4685cebc0b2" SourceId="1" SourceUrl="http://localhost:58932/AsocService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AsocService.disco" MetadataType="Disco" ID="cbdcf4c2-dd9f-407b-9230-1b07216acac7" SourceId="1" SourceUrl="http://localhost:58932/AsocService.svc?disco" />
+    <MetadataFile FileName="AsocService4.xsd" MetadataType="Schema" ID="196dedfe-3d6e-4c47-a52a-f5645234efda" SourceId="1" SourceUrl="http://localhost:58932/AsocService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

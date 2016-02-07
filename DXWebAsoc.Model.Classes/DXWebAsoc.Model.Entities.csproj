@@ -40,8 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\CDivision.cs" />
-    <Compile Include="EntityBase\CObject.cs" />
+    <Compile Include="Entities\CUsuario.cs" />
+    <Compile Include="EntityBase\Entity.cs" />
+    <Compile Include="Enums\Enums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,8 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\BLLDivision.cs" />
+    <Compile Include="Entities\BLLUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WCFService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DXWebAsoc.DAL.CORE\DXWebAsoc.DAL.CORE.csproj">
@@ -52,6 +59,49 @@
       <Project>{24b072dc-560f-47d0-b173-ec51f25874c2}</Project>
       <Name>DXWebAsoc.Model.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\WCFService\AsocService.wsdl" />
+    <None Include="Service References\WCFService\AsocService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFService\AsocService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFService\AsocService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFService\AsocService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFService\AsocService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFService\DXWebAsoc.BusinessLogic.WCFService.WCFUsuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WCFService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFService\AsocService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
