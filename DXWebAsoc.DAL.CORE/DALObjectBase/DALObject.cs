@@ -11,7 +11,7 @@ namespace DXWebAsoc.DAL.CORE
     public class DALObject
     {
         #region Properties
-        protected string ConnectionStringName = "MIToolDatabaase";
+        protected string ConnectionStringName = "DBEventos";
         #endregion
     }
 }

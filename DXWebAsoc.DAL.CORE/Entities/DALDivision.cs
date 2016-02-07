@@ -26,8 +26,8 @@ namespace DXWebAsoc.DAL.CORE
             using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
             {
                 // Create Command
-                OleDbCommand command = new OleDbCommand();
-                //SqlCommand command = new SqlCommand();
+                //OleDbCommand command = new OleDbCommand();
+                SqlCommand command = new SqlCommand();
                 //MySqlCommand command = new MySqlCommand();
 
                 // Define Type of command            
@@ -64,8 +64,8 @@ namespace DXWebAsoc.DAL.CORE
                 // DataSet: Disconnected data. 
                 DataSet ds = null;
                 // Create Command
-                OleDbCommand command = new OleDbCommand();
-                //SqlCommand command = new SqlCommand();
+                //OleDbCommand command = new OleDbCommand();
+                SqlCommand command = new SqlCommand();
                 //MySqlCommand command = new MySqlCommand();
 
                 // Define Type of command            
@@ -107,8 +107,8 @@ namespace DXWebAsoc.DAL.CORE
                 // DataSet: Disconnected data. 
                 DataSet ds = null;
                 // Create Command
-                OleDbCommand command = new OleDbCommand();
-                //SqlCommand command = new SqlCommand();
+                //OleDbCommand command = new OleDbCommand();
+                SqlCommand command = new SqlCommand();
                 //MySqlCommand command = new MySqlCommand();
 
                 // Define Type of command            
@@ -148,8 +148,8 @@ namespace DXWebAsoc.DAL.CORE
             using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
             {
                 // Create Command
-                OleDbCommand command = new OleDbCommand();
-                //SqlCommand command = new SqlCommand();
+                //OleDbCommand command = new OleDbCommand();
+                SqlCommand command = new SqlCommand();
                 //MySqlCommand command = new MySqlCommand();
 
                 // Define Type of command            
@@ -182,8 +182,8 @@ namespace DXWebAsoc.DAL.CORE
             using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
             {
                 // Create Command
-                OleDbCommand command = new OleDbCommand();
-                //SqlCommand command = new SqlCommand();
+                //OleDbCommand command = new OleDbCommand();
+                SqlCommand command = new SqlCommand();
                 //MySqlCommand command = new MySqlCommand();
 
                 // Define Type of command            

@@ -15,19 +15,19 @@ namespace DXWebAsoc.DAL.DS
     public class DataBase : IDisposable 
     {
         #region Properties
-        //public SqlConnection conn { set; get; }
+        public SqlConnection conn { set; get; }
         //public MySqlConnection conexion { get; set; }
-        public OleDbConnection conn { set; get; }
+        //public OleDbConnection conn { set; get; }
         #endregion
 
         #region Methods
-        //public SqlDataReader ExecuteReader(SqlCommand pCommand)
+        public SqlDataReader ExecuteReader(SqlCommand pCommand)
         //public MySqlDataReader ExecuteReader(MySqlCommand pCommand)
-        public OleDbDataReader ExecuteReader(OleDbCommand pCommand)
+        //public OleDbDataReader ExecuteReader(OleDbCommand pCommand)
         {
-            //SqlDataReader reader = null;
+            SqlDataReader reader = null;
             //MySqlDataReader lector = null;
-            OleDbDataReader reader = null;
+            //OleDbDataReader reader = null;
             try
             {
                 pCommand.Connection = conn;
@@ -41,16 +41,16 @@ namespace DXWebAsoc.DAL.DS
                 throw ex;                
             }
         }
-        //public DataSet ExecuteReader(SqlCommand pCommand, String pTable)
+        public DataSet ExecuteReader(SqlCommand pCommand, String pTable)
         //public DataSet executeReader(MySqlCommand pCommand, String tabla)
-        public DataSet ExecuteReader(OleDbCommand pCommand, String pTable)
+        //public DataSet ExecuteReader(OleDbCommand pCommand, String pTable)
         {
             DataSet dsTable = new DataSet();
             try
             {
-                //using (SqlDataAdapter adapter = new SqlDataAdapter(pCommand))
+                using (SqlDataAdapter adapter = new SqlDataAdapter(pCommand))
                 //using (MySqlDataAdapter adaptador = new MySqlDataAdapter(pCommand))
-                using (OleDbDataAdapter adapter = new OleDbDataAdapter(pCommand))
+                //using (OleDbDataAdapter adapter = new OleDbDataAdapter(pCommand))
                 {
                     pCommand.Connection = conn;
                     dsTable = new DataSet();
@@ -74,13 +74,13 @@ namespace DXWebAsoc.DAL.DS
             }
         }
 
-        //public int ExecuteNonQuery(SqlCommand pCommand, IsolationLevel pIsolationLevel)
+        public int ExecuteNonQuery(SqlCommand pCommand, IsolationLevel pIsolationLevel)
         //public int executeNonQuery(MySqlCommand pCommand, IsolationLevel isolationLevel)
-        public int ExecuteNonQuery(OleDbCommand pCommand, IsolationLevel pIsolationLevel)
+        //public int ExecuteNonQuery(OleDbCommand pCommand, IsolationLevel pIsolationLevel)
         {
-            //using (SqlTransaction trans = conn.BeginTransaction(pIsolationLevel))
+            using (SqlTransaction trans = conn.BeginTransaction(pIsolationLevel))
             //using (MySqlTransaction trans = conn.BeginTransaction(isolationLevel))
-            using (OleDbTransaction trans = conn.BeginTransaction(pIsolationLevel))
+            //using (OleDbTransaction trans = conn.BeginTransaction(pIsolationLevel))
             {
                 int rowsAffected = 0;
                 try
@@ -101,9 +101,9 @@ namespace DXWebAsoc.DAL.DS
             }
         }
 
-        //public int ExecuteNonQuery(SqlCommand pCommand)
+        public int ExecuteNonQuery(SqlCommand pCommand)
         //public int executeNonQuery(MySqlCommand pCommand) 
-        public int ExecuteNonQuery(OleDbCommand pCommand)
+        //public int ExecuteNonQuery(OleDbCommand pCommand)
         {
             int rowsAffected = 0;
             try
@@ -124,13 +124,13 @@ namespace DXWebAsoc.DAL.DS
             }
         }
 
-        //public void ExecuteNonQuery(ref SqlCommand pCommand, IsolationLevel pIsolationLevel)
+        public void ExecuteNonQuery(ref SqlCommand pCommand, IsolationLevel pIsolationLevel)
         //public void executeNonQuery(ref MySqlCommand pCommand, IsolationLevel isolationLevel)
-        public void ExecuteNonQuery(ref OleDbCommand pCommand, IsolationLevel pIsolationLevel)
+        //public void ExecuteNonQuery(ref OleDbCommand pCommand, IsolationLevel pIsolationLevel)
         {
-            //using (SqlTransaction trans = conn.BeginTransaction(pIsolationLevel))
+            using (SqlTransaction trans = conn.BeginTransaction(pIsolationLevel))
             //using (MySqlTransaction trans = conn.BeginTransaction(isolationLevel))
-            using (OleDbTransaction trans = conn.BeginTransaction(pIsolationLevel))
+            //using (OleDbTransaction trans = conn.BeginTransaction(pIsolationLevel))
             {
                 try
                 {
@@ -149,19 +149,19 @@ namespace DXWebAsoc.DAL.DS
             }
         }
 
-        //public void ExecuteNonQuery(List<SqlCommand> pCommands, IsolationLevel pIsolationLevel)
+        public void ExecuteNonQuery(List<SqlCommand> pCommands, IsolationLevel pIsolationLevel)
         //public void ExecuteNonQuery(List<MySqlCommand> pCommands, IsolationLevel isolationLevel)
-        public void ExecuteNonQuery(List<OleDbCommand> pCommands, IsolationLevel pIsolationLevel)
+        //public void ExecuteNonQuery(List<OleDbCommand> pCommands, IsolationLevel pIsolationLevel)
         {
-            //using (SqlTransaction trans = conn.BeginTransaction(pIsolationLevel))
+            using (SqlTransaction trans = conn.BeginTransaction(pIsolationLevel))
             //using (MySqlTransaction trans = conexion.BeginTransaction(isolationLevel))
-            using (OleDbTransaction trans = conn.BeginTransaction(pIsolationLevel))
+            //using (OleDbTransaction trans = conn.BeginTransaction(pIsolationLevel))
             {
                 try
                 {
-                    //foreach (SqlCommand command in pCommands)
+                    foreach (SqlCommand command in pCommands)
                     //foreach (MySqlCommand command in pCommands)
-                    foreach (OleDbCommand command in pCommands)
+                    //foreach (OleDbCommand command in pCommands)
                     {
                         command.Connection = conn;
                         command.Transaction = trans;

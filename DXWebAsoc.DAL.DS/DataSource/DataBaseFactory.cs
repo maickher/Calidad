@@ -25,9 +25,9 @@ namespace DXWebAsoc.DAL.DS
                 DataBase db = new DataBase();
                 stringConnection = ConfigurationManager.ConnectionStrings[pStringConnectionName].ToString();
 
-                //SqlConnection connection = new SqlConnection(stringConnection);
+                SqlConnection connection = new SqlConnection(stringConnection);
                 //MySqlConnection connection = new MySqlConnection(stringConnection);
-                OleDbConnection connection = new OleDbConnection(stringConnection);
+                //OleDbConnection connection = new OleDbConnection(stringConnection);
                 connection.Open();
                 db.conn = connection;
                 if (connection.State != ConnectionState.Open)
@@ -52,9 +52,9 @@ namespace DXWebAsoc.DAL.DS
                 stringConnection = ConfigurationManager.ConnectionStrings[pStringConnectionName].ToString();
                 stringConnection = stringConnection + String.Format("User Id={0};Password={1};", pUser, pPassword);
 
-                //SqlConnection connection = new SqlConnection(stringConnection);
+                SqlConnection connection = new SqlConnection(stringConnection);
                 //MySqlConnection connection = new MySqlConnection(stringConnection);
-                OleDbConnection connection = new OleDbConnection(stringConnection);
+                //OleDbConnection connection = new OleDbConnection(stringConnection);
                 connection.Open();
                 db.conn = connection;
                 if (connection.State != ConnectionState.Open)
