@@ -43,6 +43,16 @@
     <Compile Include="Entities\BLLDivision.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DXWebAsoc.DAL.CORE\DXWebAsoc.DAL.CORE.csproj">
+      <Project>{0f553262-bea0-464c-a390-ee6115774842}</Project>
+      <Name>DXWebAsoc.DAL.CORE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DXWebAsoc.Model.Classes\DXWebAsoc.Model.Entities.csproj">
+      <Project>{24b072dc-560f-47d0-b173-ec51f25874c2}</Project>
+      <Name>DXWebAsoc.Model.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

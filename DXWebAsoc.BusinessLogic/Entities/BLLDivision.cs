@@ -5,7 +5,7 @@ using System.Text;
 using DXWebAsoc.DAL.CORE;
 using DXWebAsoc.Model.Entities;
 
-namespace MITool.Model.BLL
+namespace DXWebAsoc.BLL
 {
     public class BLLDivision
     {

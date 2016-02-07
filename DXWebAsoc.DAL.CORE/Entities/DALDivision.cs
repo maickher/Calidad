@@ -7,8 +7,8 @@ using DXWebAsoc.Model.Entities;
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
-//using MySql.Data.MySqlClient;
-using DXWebAsoc.DAL;
+using MySql.Data.MySqlClient;
+using DXWebAsoc.DAL.DS;
 
 namespace DXWebAsoc.DAL.CORE
 {
