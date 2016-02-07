@@ -27,6 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXWebAsoc.BusinessLogic", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{2E475058-35B7-4504-B9E8-D2C03F5D1A46}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{5CE0BE61-C85B-4824-A968-ABDD94E573C0}"
+	ProjectSection(SolutionItems) = preProject
+		..\Tarea Calidad\sp_Base_Datos_Eventos.sql = ..\Tarea Calidad\sp_Base_Datos_Eventos.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,5 +73,6 @@ Global
 		{84EF9F30-DFD5-4FD9-951F-DF8C8FC6BCE9} = {81CDE690-491B-41E0-9144-B960C8584110}
 		{DE530DBE-EEA8-4E58-8B2E-6FABF8EAE24B} = {CE6994B4-D077-4311-8569-4EFC01AC1413}
 		{2E475058-35B7-4504-B9E8-D2C03F5D1A46} = {5F54B63A-F418-4120-84F2-774339DD7EEC}
+		{5CE0BE61-C85B-4824-A968-ABDD94E573C0} = {5F54B63A-F418-4120-84F2-774339DD7EEC}
 	EndGlobalSection
 EndGlobal
