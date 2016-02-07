@@ -45,9 +45,9 @@ namespace WcfService
             throw new NotImplementedException();
         }
 
-        public WCFUsuario ReadUser(Entity entity)
+        public WCFUsuario ReadUser(CObject entity)
         {
-            Entity Entity = (DALConnection as DALUsuario).Read(entity);
+            CObject Entity = (DALConnection as DALUsuario).Read(entity);
             WCFUsuario WCFUsuario = new WCFUsuario()
             {
                 Id = (Entity as CUsuario).Id,

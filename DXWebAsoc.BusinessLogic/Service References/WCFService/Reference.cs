@@ -9,232 +9,41 @@
 //------------------------------------------------------------------------------
 
 namespace DXWebAsoc.BusinessLogic.WCFService {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="WCFUsuario", Namespace="http://schemas.datacontract.org/2004/07/WcfService.Services")]
-    [System.SerializableAttribute()]
-    public partial class WCFUsuario : System.Web.Security.MembershipUser, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ContrasenaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UserState EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FechaCreacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FechaModificacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Role RoleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioCreacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioModificacionField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Contrasena {
-            get {
-                return this.ContrasenaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ContrasenaField, value) != true)) {
-                    this.ContrasenaField = value;
-                    this.RaisePropertyChanged("Contrasena");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public UserState Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaCreacion {
-            get {
-                return this.FechaCreacionField;
-            }
-            set {
-                if ((this.FechaCreacionField.Equals(value) != true)) {
-                    this.FechaCreacionField = value;
-                    this.RaisePropertyChanged("FechaCreacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaModificacion {
-            get {
-                return this.FechaModificacionField;
-            }
-            set {
-                if ((this.FechaModificacionField.Equals(value) != true)) {
-                    this.FechaModificacionField = value;
-                    this.RaisePropertyChanged("FechaModificacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
-            get {
-                return this.NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Role Role {
-            get {
-                return this.RoleField;
-            }
-            set {
-                if ((this.RoleField.Equals(value) != true)) {
-                    this.RoleField = value;
-                    this.RaisePropertyChanged("Role");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Usuario {
-            get {
-                return this.UsuarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
-                    this.UsuarioField = value;
-                    this.RaisePropertyChanged("Usuario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UsuarioCreacion {
-            get {
-                return this.UsuarioCreacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioCreacionField, value) != true)) {
-                    this.UsuarioCreacionField = value;
-                    this.RaisePropertyChanged("UsuarioCreacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UsuarioModificacion {
-            get {
-                return this.UsuarioModificacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioModificacionField, value) != true)) {
-                    this.UsuarioModificacionField = value;
-                    this.RaisePropertyChanged("UsuarioModificacion");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WCFService.IAsocService")]
     public interface IAsocService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/CreateUser", ReplyAction="http://tempuri.org/IAsocService/CreateUserResponse")]
-        void CreateUser(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario user);
+        void CreateUser(WcfService.Services.WCFUsuario user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/CreateUser", ReplyAction="http://tempuri.org/IAsocService/CreateUserResponse")]
-        System.Threading.Tasks.Task CreateUserAsync(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario user);
+        System.Threading.Tasks.Task CreateUserAsync(WcfService.Services.WCFUsuario user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/UpdateUser", ReplyAction="http://tempuri.org/IAsocService/UpdateUserResponse")]
-        void UpdateUser(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario user);
+        void UpdateUser(WcfService.Services.WCFUsuario user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/UpdateUser", ReplyAction="http://tempuri.org/IAsocService/UpdateUserResponse")]
-        System.Threading.Tasks.Task UpdateUserAsync(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario user);
+        System.Threading.Tasks.Task UpdateUserAsync(WcfService.Services.WCFUsuario user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/ReadUser", ReplyAction="http://tempuri.org/IAsocService/ReadUserResponse")]
-        DXWebAsoc.BusinessLogic.WCFService.WCFUsuario ReadUser(DXWebAsoc.Model.Entities.Entity user);
+        WcfService.Services.WCFUsuario ReadUser(DXWebAsoc.Model.Entities.CObject user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/ReadUser", ReplyAction="http://tempuri.org/IAsocService/ReadUserResponse")]
-        System.Threading.Tasks.Task<DXWebAsoc.BusinessLogic.WCFService.WCFUsuario> ReadUserAsync(DXWebAsoc.Model.Entities.Entity user);
+        System.Threading.Tasks.Task<WcfService.Services.WCFUsuario> ReadUserAsync(DXWebAsoc.Model.Entities.CObject user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/ReadAllUser", ReplyAction="http://tempuri.org/IAsocService/ReadAllUserResponse")]
-        DXWebAsoc.BusinessLogic.WCFService.WCFUsuario[] ReadAllUser();
+        WcfService.Services.WCFUsuario[] ReadAllUser();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/ReadAllUser", ReplyAction="http://tempuri.org/IAsocService/ReadAllUserResponse")]
-        System.Threading.Tasks.Task<DXWebAsoc.BusinessLogic.WCFService.WCFUsuario[]> ReadAllUserAsync();
+        System.Threading.Tasks.Task<WcfService.Services.WCFUsuario[]> ReadAllUserAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/DeleteUser", ReplyAction="http://tempuri.org/IAsocService/DeleteUserResponse")]
-        void DeleteUser(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario id);
+        void DeleteUser(WcfService.Services.WCFUsuario id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/DeleteUser", ReplyAction="http://tempuri.org/IAsocService/DeleteUserResponse")]
-        System.Threading.Tasks.Task DeleteUserAsync(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario id);
+        System.Threading.Tasks.Task DeleteUserAsync(WcfService.Services.WCFUsuario id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -264,43 +73,43 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
                 base(binding, remoteAddress) {
         }
         
-        public void CreateUser(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario user) {
+        public void CreateUser(WcfService.Services.WCFUsuario user) {
             base.Channel.CreateUser(user);
         }
         
-        public System.Threading.Tasks.Task CreateUserAsync(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario user) {
+        public System.Threading.Tasks.Task CreateUserAsync(WcfService.Services.WCFUsuario user) {
             return base.Channel.CreateUserAsync(user);
         }
         
-        public void UpdateUser(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario user) {
+        public void UpdateUser(WcfService.Services.WCFUsuario user) {
             base.Channel.UpdateUser(user);
         }
         
-        public System.Threading.Tasks.Task UpdateUserAsync(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario user) {
+        public System.Threading.Tasks.Task UpdateUserAsync(WcfService.Services.WCFUsuario user) {
             return base.Channel.UpdateUserAsync(user);
         }
         
-        public DXWebAsoc.BusinessLogic.WCFService.WCFUsuario ReadUser(DXWebAsoc.Model.Entities.Entity user) {
+        public WcfService.Services.WCFUsuario ReadUser(DXWebAsoc.Model.Entities.CObject user) {
             return base.Channel.ReadUser(user);
         }
         
-        public System.Threading.Tasks.Task<DXWebAsoc.BusinessLogic.WCFService.WCFUsuario> ReadUserAsync(DXWebAsoc.Model.Entities.Entity user) {
+        public System.Threading.Tasks.Task<WcfService.Services.WCFUsuario> ReadUserAsync(DXWebAsoc.Model.Entities.CObject user) {
             return base.Channel.ReadUserAsync(user);
         }
         
-        public DXWebAsoc.BusinessLogic.WCFService.WCFUsuario[] ReadAllUser() {
+        public WcfService.Services.WCFUsuario[] ReadAllUser() {
             return base.Channel.ReadAllUser();
         }
         
-        public System.Threading.Tasks.Task<DXWebAsoc.BusinessLogic.WCFService.WCFUsuario[]> ReadAllUserAsync() {
+        public System.Threading.Tasks.Task<WcfService.Services.WCFUsuario[]> ReadAllUserAsync() {
             return base.Channel.ReadAllUserAsync();
         }
         
-        public void DeleteUser(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario id) {
+        public void DeleteUser(WcfService.Services.WCFUsuario id) {
             base.Channel.DeleteUser(id);
         }
         
-        public System.Threading.Tasks.Task DeleteUserAsync(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario id) {
+        public System.Threading.Tasks.Task DeleteUserAsync(WcfService.Services.WCFUsuario id) {
             return base.Channel.DeleteUserAsync(id);
         }
     }

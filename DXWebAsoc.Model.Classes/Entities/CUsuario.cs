@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DXWebAsoc.Model.Entities
 {
-    public class CUsuario: Entity
+    public class CUsuario: CObject
     {
         /*
         	[IdUsuario] [int] IDENTITY(1,1) NOT NULL,

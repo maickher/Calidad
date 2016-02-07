@@ -187,10 +187,10 @@ namespace DXWebAsoc.DAL.CORE
         /// </summary>
         /// <param name="pId"></param>
         /// <returns></returns>        
-        public Entity Read(Entity pObject)
+        public CObject Read(CObject pObject)
         {
             // Object
-            Entity oCObject = null;
+            CObject oCObject = null;
             // Execute Instruction
             using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
             {
@@ -235,7 +235,7 @@ namespace DXWebAsoc.DAL.CORE
         /// </summary>
         /// <param name="dr"></param>
         /// <returns></returns>        
-        public Entity PopulateObject(DataRow dr)
+        public CObject PopulateObject(DataRow dr)
         {
             CUsuario oCObject = new CUsuario();
             oCObject.Id = Convert.ToInt32(dr["IdUsuario"]);

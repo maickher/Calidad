@@ -93,10 +93,6 @@
       <Project>{24b072dc-560f-47d0-b173-ec51f25874c2}</Project>
       <Name>DXWebAsoc.Model.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Utilities\Utilities.csproj">
-      <Project>{2e475058-35b7-4504-b9e8-d2c03f5d1a46}</Project>
-      <Name>Utilities</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

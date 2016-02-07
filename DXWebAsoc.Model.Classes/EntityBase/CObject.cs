@@ -5,10 +5,12 @@ using System.Text;
 
 namespace DXWebAsoc.Model.Entities
 {
-    public abstract class CObject
+    public class CObject
     {
-        //
-        override
-        public abstract string ToString();
+        public int Id { set; get; }
+        public string UsuarioCreacion { set; get; }
+        public DateTime FechaCreacion { set; get; }
+        public string UsuarioModificacion { set; get; }
+        public DateTime FechaModificacion { set; get; }
     }
 }

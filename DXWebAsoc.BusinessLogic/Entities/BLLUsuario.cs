@@ -9,7 +9,7 @@ using System.Security.Cryptography;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Configuration;
-using DXWebAsoc.BusinessLogic.WCFService;
+using WcfService.Services;
 
 namespace DXWebAsoc.BLL
 {
@@ -205,10 +205,10 @@ namespace DXWebAsoc.BLL
 
         #region CRUD
         #region Read
-        public MembershipUser ReadUser(Entity entity)
+        public MembershipUser ReadUser(CObject entity)
         {
-            WCFUsuario WCFUsuario = this.servicio.ReadUser(entity);
-            return WCFUsuario;
+            WCFUsuario WCFuser = this.servicio.ReadUser(entity);
+            return WCFuser;
         }
         #endregion
 

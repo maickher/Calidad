@@ -55,17 +55,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DXWebAsoc.Model.Classes\DXWebAsoc.Model.Entities.csproj">
-      <Project>{24b072dc-560f-47d0-b173-ec51f25874c2}</Project>
-      <Name>DXWebAsoc.Model.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Utilities\Utilities.csproj">
-      <Project>{2e475058-35b7-4504-b9e8-d2c03f5d1a46}</Project>
-      <Name>Utilities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\WcfService.Services.WCFUsuario.datasource" />
     <None Include="Service References\WCFService\AsocService.wsdl" />
     <None Include="Service References\WCFService\AsocService.xsd">
       <SubType>Designer</SubType>
@@ -84,9 +75,6 @@
     </None>
     <None Include="Service References\WCFService\AsocService5.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\WCFService\DXWebAsoc.BusinessLogic.WCFService.WCFUsuario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +97,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DXWebAsoc.Model.Classes\DXWebAsoc.Model.Entities.csproj">
+      <Project>{24b072dc-560f-47d0-b173-ec51f25874c2}</Project>
+      <Name>DXWebAsoc.Model.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WcfService\WcfService.csproj">
+      <Project>{f3775016-1804-4120-ab7d-cb68f84f288c}</Project>
+      <Name>WcfService</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

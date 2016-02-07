@@ -50,6 +50,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DXWebAsoc.DAL.DS\DXWebAsoc.DAL.DS.csproj">
       <Project>{84ef9f30-dfd5-4fd9-951f-df8c8fc6bce9}</Project>
       <Name>DXWebAsoc.DAL.DS</Name>
@@ -62,10 +66,6 @@
       <Project>{2e475058-35b7-4504-b9e8-d2c03f5d1a46}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

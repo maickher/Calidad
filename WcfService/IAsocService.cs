@@ -23,7 +23,7 @@ namespace WcfService
         void UpdateUser(WCFUsuario user);
 
         [OperationContract]
-        WCFUsuario ReadUser(Entity user);
+        WCFUsuario ReadUser(CObject user);
 
         [OperationContract]
         List<WCFUsuario> ReadAllUser();
