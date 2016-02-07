@@ -7,6 +7,7 @@ namespace DXWebAsoc.Model.Entities
 {
     public class CDivision: CObject
     {
+        //Test
         #region Properties
         public int IdDivision { set; get; }
         public string Division { set; get;}
