@@ -29,6 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Util
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScriptsBD", "ScriptsBD", "{017B1D1B-9A42-4D83-8C9E-BCED540F7B12}"
 	ProjectSection(SolutionItems) = preProject
+		..\sp_Base_Datos_Eventos.sql = ..\sp_Base_Datos_Eventos.sql
 		..\sp_usuarios.sql = ..\sp_usuarios.sql
 	EndProjectSection
 EndProject
