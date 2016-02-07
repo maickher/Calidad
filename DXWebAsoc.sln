@@ -21,9 +21,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{95FB6EA5-F8BB-4615-A92A-E93E1988A80A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{5F54B63A-F418-4120-84F2-774339DD7EEC}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Desktop\Tarea Calidad\sp_Base_Datos_Eventos.txt = ..\..\..\Desktop\Tarea Calidad\sp_Base_Datos_Eventos.txt
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXWebAsoc.Model.Entities", "DXWebAsoc.Model.Classes\DXWebAsoc.Model.Entities.csproj", "{24B072DC-560F-47D0-B173-EC51F25874C2}"
 EndProject
