@@ -35,6 +35,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "WcfService\Wc
 		{0F553262-BEA0-464C-A390-EE6115774842} = {0F553262-BEA0-464C-A390-EE6115774842}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{908B4FC9-EE97-43BB-9D8D-F32F2CA01CA5}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\Tarea Calidad\sp_Base_Datos_Eventos.sql = ..\..\..\Desktop\Tarea Calidad\sp_Base_Datos_Eventos.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,5 +86,6 @@ Global
 		{DE530DBE-EEA8-4E58-8B2E-6FABF8EAE24B} = {CE6994B4-D077-4311-8569-4EFC01AC1413}
 		{2E475058-35B7-4504-B9E8-D2C03F5D1A46} = {5F54B63A-F418-4120-84F2-774339DD7EEC}
 		{F3775016-1804-4120-AB7D-CB68F84F288C} = {95FB6EA5-F8BB-4615-A92A-E93E1988A80A}
+		{908B4FC9-EE97-43BB-9D8D-F32F2CA01CA5} = {5F54B63A-F418-4120-84F2-774339DD7EEC}
 	EndGlobalSection
 EndGlobal
