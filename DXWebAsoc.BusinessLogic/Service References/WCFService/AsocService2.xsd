@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="UserState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Activo" />
+      <xs:enumeration value="Inactivo" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserState" nillable="true" type="tns:UserState" />
+  <xs:simpleType name="Role">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Administrador" />
+      <xs:enumeration value="Registrador" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Role" nillable="true" type="tns:Role" />
+</xs:schema>

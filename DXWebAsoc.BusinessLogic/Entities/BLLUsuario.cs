@@ -4,16 +4,24 @@ using System.Linq;
 using System.Text;
 using DXWebAsoc.DAL.CORE;
 using DXWebAsoc.Model.Entities;
+using 
 
 namespace DXWebAsoc.BLL
 {
-    public class BLLDivision
+    public class BLLUsuario
     {
         #region Properties
-        private DALDivision DALedger;
+        // Web Service
+        private BusinessLogic.WCFService.IAsocService servicio;
         #endregion
         #region Constructor
-        public BLLDivision()
+        public BLLUsuario()
+        {
+            // Web Service Instance
+            this.servicio = new BusinessLogic.WCFService.AsocServiceClient();
+        }
+
+        public BLLUsuario()
         {
             this.DALedger = new DALDivision();
         }
@@ -24,7 +32,7 @@ namespace DXWebAsoc.BLL
         /// Create:
         /// </summary>
         /// <param name="pCObject"></param>
-        public void Create(CObject pCObject)
+        public void Create(Entity pCObject)
         {
             if (!this.Exists(pCObject))
             {
@@ -42,7 +50,7 @@ namespace DXWebAsoc.BLL
         /// </summary>
         /// <param name="pCObject"></param>
         /// <returns></returns>
-        public CObject ReadById(CObject pCObject)
+        public Entity ReadById(Entity pCObject)
         {
             return this.DALedger.ReadById(pCObject);
         }
@@ -50,7 +58,7 @@ namespace DXWebAsoc.BLL
         /// ReadAll:
         /// </summary>
         /// <returns></returns>
-        public List<CObject> ReadAll()
+        public List<Entity> ReadAll()
         {
             return this.DALedger.ReadAll();
         }
@@ -60,7 +68,7 @@ namespace DXWebAsoc.BLL
         /// Update:
         /// </summary>
         /// <param name="pCObject"></param>
-        public void Update(CObject pCObject)
+        public void Update(Entity pCObject)
         {
             if (this.Exists(pCObject))
             {
@@ -77,7 +85,7 @@ namespace DXWebAsoc.BLL
         /// Delete:
         /// </summary>
         /// <param name="pCObject"></param>
-        public void Delete(CObject pCObject)
+        public void Delete(Entity pCObject)
         {
             if (this.Exists(pCObject))
             {
@@ -95,7 +103,7 @@ namespace DXWebAsoc.BLL
         /// </summary>
         /// <param name="pCObject"></param>
         /// <returns></returns>
-        public bool Exists(CObject pCObject)
+        public bool Exists(Entity pCObject)
         {
             return this.DALedger.Exists(pCObject);
         }

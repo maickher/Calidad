@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService.Services" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService.Services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58932/AsocService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:import schemaLocation="http://localhost:58932/AsocService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Web.Security" />
+  <xs:complexType name="WCFUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Web.Security" base="q1:MembershipUser">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Contrasena" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Estado" type="q2:UserState" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Role" type="q3:Role" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WCFUsuario" nillable="true" type="tns:WCFUsuario" />
+  <xs:complexType name="ArrayOfWCFUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WCFUsuario" nillable="true" type="tns:WCFUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWCFUsuario" nillable="true" type="tns:ArrayOfWCFUsuario" />
+</xs:schema>
