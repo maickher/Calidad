@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{95FB6EA5-F8B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{5F54B63A-F418-4120-84F2-774339DD7EEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXWebAsoc.Model.Classes", "DXWebAsoc.Model.Classes\DXWebAsoc.Model.Classes.csproj", "{24B072DC-560F-47D0-B173-EC51F25874C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXWebAsoc.Model.Entities", "DXWebAsoc.Model.Classes\DXWebAsoc.Model.Entities.csproj", "{24B072DC-560F-47D0-B173-EC51F25874C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXWebAsoc.DAL.CORE", "DXWebAsoc.DAL.CORE\DXWebAsoc.DAL.CORE.csproj", "{0F553262-BEA0-464C-A390-EE6115774842}"
 EndProject

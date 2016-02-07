@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MITool.Model.Entities
+namespace DXWebAsoc.Model.Entities
 {
     public class CDivision: CObject
     {

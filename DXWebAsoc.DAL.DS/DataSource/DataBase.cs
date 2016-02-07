@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace Model.DAL.DS
+namespace DXWebAsoc.DAL.DS
 {
     /// <summary>
     /// IDisponsable provides a mechanism for realising unmanaged resources

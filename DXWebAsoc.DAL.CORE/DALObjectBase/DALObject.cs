@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MITool.Model.Entities;
+using DXWebAsoc.Model.Entities;
 using System.Configuration;
 using System.Data;
 
-namespace MITool.Model.DAL.CORE
+namespace DXWebAsoc.DAL.CORE
 {
     public class DALObject
     {

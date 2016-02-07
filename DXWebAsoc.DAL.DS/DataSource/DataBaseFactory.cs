@@ -8,7 +8,7 @@ using System.Text;
 using System.Configuration;
 using System.Reflection;
 
-namespace Model.DAL.DS
+namespace DXWebAsoc.DAL.DS
 {
     public class DataBaseFactory
     {

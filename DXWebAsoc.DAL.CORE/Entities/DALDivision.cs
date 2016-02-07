@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 // Add
-using MITool.Model.Entities;
+using DXWebAsoc.Model.Entities;
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
-using Model.DAL.DS;
+using DXWebAsoc.DAL.DS;
 
-namespace MITool.Model.DAL.CORE
+namespace DXWebAsoc.DAL.CORE
 {
     public class DALDivision : DALObject
     {

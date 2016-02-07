@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Model.DAL.DS
+namespace DXWebAsoc.DAL.DS
 {
     /// <summary>
     /// Class Log: To track all exceptions lauch by DataBase connection errors. 

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MITool.Model.DAL.CORE;
-using MITool.Model.Entities;
+using DXWebAsoc.DAL.CORE;
+using DXWebAsoc.Model.Entities;
 
 namespace MITool.Model.BLL
 {
