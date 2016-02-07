@@ -205,10 +205,19 @@ namespace DXWebAsoc.BLL
 
         #region CRUD
         #region Read
-        public MembershipUser ReadUser(CObject entity)
+        //public MembershipUser ReadUser(CObject entity)/
+        public bool ReadUser(CObject entity)
         {
             WCFUsuario WCFuser = this.servicio.ReadUser(entity);
-            return WCFuser;
+            if (WCFuser!=null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
         #endregion
 

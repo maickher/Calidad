@@ -216,6 +216,20 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DXWebAsoc.BusinessLogic\DXWebAsoc.BusinessLogic.csproj">
+      <Project>{de530dbe-eea8-4e58-8b2e-6fabf8eae24b}</Project>
+      <Name>DXWebAsoc.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DXWebAsoc.Model.Classes\DXWebAsoc.Model.Entities.csproj">
+      <Project>{24b072dc-560f-47d0-b173-ec51f25874c2}</Project>
+      <Name>DXWebAsoc.Model.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{2e475058-35b7-4504-b9e8-d2c03f5d1a46}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
