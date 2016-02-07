@@ -44,7 +44,16 @@
     <Compile Include="Entities\DALDivision.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DXWebAsoc.DAL.DS\DXWebAsoc.DAL.DS.csproj">
+      <Project>{84ef9f30-dfd5-4fd9-951f-df8c8fc6bce9}</Project>
+      <Name>DXWebAsoc.DAL.DS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DXWebAsoc.Model.Classes\DXWebAsoc.Model.Entities.csproj">
+      <Project>{24b072dc-560f-47d0-b173-ec51f25874c2}</Project>
+      <Name>DXWebAsoc.Model.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
