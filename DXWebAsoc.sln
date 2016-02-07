@@ -36,6 +36,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{5CE0
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "WcfService\WcfService.csproj", "{F3775016-1804-4120-AB7D-CB68F84F288C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F553262-BEA0-464C-A390-EE6115774842} = {0F553262-BEA0-464C-A390-EE6115774842}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

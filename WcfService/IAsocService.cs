@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using WcfService.Services;
+using DXWebAsoc.Model.Entities;
 
 namespace WcfService
 {
@@ -22,13 +23,13 @@ namespace WcfService
         void UpdateUser(WCFUsuario user);
 
         [OperationContract]
-        WCFUsuario RedUser(int id);
+        WCFUsuario ReadUser(Entity user);
 
         [OperationContract]
         List<WCFUsuario> ReadAllUser();
 
         [OperationContract]
-        void DeleteUser(int id);
+        void DeleteUser(WCFUsuario id);
         #endregion
         #endregion
 

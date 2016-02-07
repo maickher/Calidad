@@ -28,9 +28,9 @@ namespace DXWebAsoc.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=Eventos;Persist Security Info=True;User ID=sa" +
             ";Password=123456")]
-        public string Setting {
+        public string DBEventos {
             get {
-                return ((string)(this["Setting"]));
+                return ((string)(this["DBEventos"]));
             }
         }
     }

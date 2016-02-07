@@ -15,42 +15,42 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MembershipUser", Namespace="http://schemas.datacontract.org/2004/07/System.Web.Security")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WCFUsuario", Namespace="http://schemas.datacontract.org/2004/07/WcfService.Services")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(UserState))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Role))]
-    public partial class MembershipUser : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class WCFUsuario : System.Web.Security.MembershipUser, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private string _CommentField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContrasenaField;
         
-        private System.DateTime _CreationDateField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private UserState EstadoField;
         
-        private string _EmailField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaCreacionField;
         
-        private bool _IsApprovedField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaModificacionField;
         
-        private bool _IsLockedOutField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
         
-        private System.DateTime _LastActivityDateField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
         
-        private System.DateTime _LastLockoutDateField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Role RoleField;
         
-        private System.DateTime _LastLoginDateField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioField;
         
-        private System.DateTime _LastPasswordChangedDateField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioCreacionField;
         
-        private string _PasswordQuestionField;
-        
-        private string _ProviderNameField;
-        
-        private object _ProviderUserKeyField;
-        
-        private string _UserNameField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioModificacionField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -61,206 +61,6 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
                 this.extensionDataField = value;
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string _Comment {
-            get {
-                return this._CommentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this._CommentField, value) != true)) {
-                    this._CommentField = value;
-                    this.RaisePropertyChanged("_Comment");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.DateTime _CreationDate {
-            get {
-                return this._CreationDateField;
-            }
-            set {
-                if ((this._CreationDateField.Equals(value) != true)) {
-                    this._CreationDateField = value;
-                    this.RaisePropertyChanged("_CreationDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string _Email {
-            get {
-                return this._EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this._EmailField, value) != true)) {
-                    this._EmailField = value;
-                    this.RaisePropertyChanged("_Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool _IsApproved {
-            get {
-                return this._IsApprovedField;
-            }
-            set {
-                if ((this._IsApprovedField.Equals(value) != true)) {
-                    this._IsApprovedField = value;
-                    this.RaisePropertyChanged("_IsApproved");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool _IsLockedOut {
-            get {
-                return this._IsLockedOutField;
-            }
-            set {
-                if ((this._IsLockedOutField.Equals(value) != true)) {
-                    this._IsLockedOutField = value;
-                    this.RaisePropertyChanged("_IsLockedOut");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.DateTime _LastActivityDate {
-            get {
-                return this._LastActivityDateField;
-            }
-            set {
-                if ((this._LastActivityDateField.Equals(value) != true)) {
-                    this._LastActivityDateField = value;
-                    this.RaisePropertyChanged("_LastActivityDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.DateTime _LastLockoutDate {
-            get {
-                return this._LastLockoutDateField;
-            }
-            set {
-                if ((this._LastLockoutDateField.Equals(value) != true)) {
-                    this._LastLockoutDateField = value;
-                    this.RaisePropertyChanged("_LastLockoutDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.DateTime _LastLoginDate {
-            get {
-                return this._LastLoginDateField;
-            }
-            set {
-                if ((this._LastLoginDateField.Equals(value) != true)) {
-                    this._LastLoginDateField = value;
-                    this.RaisePropertyChanged("_LastLoginDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.DateTime _LastPasswordChangedDate {
-            get {
-                return this._LastPasswordChangedDateField;
-            }
-            set {
-                if ((this._LastPasswordChangedDateField.Equals(value) != true)) {
-                    this._LastPasswordChangedDateField = value;
-                    this.RaisePropertyChanged("_LastPasswordChangedDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string _PasswordQuestion {
-            get {
-                return this._PasswordQuestionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this._PasswordQuestionField, value) != true)) {
-                    this._PasswordQuestionField = value;
-                    this.RaisePropertyChanged("_PasswordQuestion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string _ProviderName {
-            get {
-                return this._ProviderNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this._ProviderNameField, value) != true)) {
-                    this._ProviderNameField = value;
-                    this.RaisePropertyChanged("_ProviderName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public object _ProviderUserKey {
-            get {
-                return this._ProviderUserKeyField;
-            }
-            set {
-                if ((object.ReferenceEquals(this._ProviderUserKeyField, value) != true)) {
-                    this._ProviderUserKeyField = value;
-                    this.RaisePropertyChanged("_ProviderUserKey");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public string _UserName {
-            get {
-                return this._UserNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this._UserNameField, value) != true)) {
-                    this._UserNameField = value;
-                    this.RaisePropertyChanged("_UserName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="WCFUsuario", Namespace="http://schemas.datacontract.org/2004/07/WcfService.Services")]
-    [System.SerializableAttribute()]
-    public partial class WCFUsuario : DXWebAsoc.BusinessLogic.WCFService.MembershipUser {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ContrasenaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private UserState EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Role RoleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Contrasena {
@@ -284,6 +84,45 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
                 if ((this.EstadoField.Equals(value) != true)) {
                     this.EstadoField = value;
                     this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaCreacion {
+            get {
+                return this.FechaCreacionField;
+            }
+            set {
+                if ((this.FechaCreacionField.Equals(value) != true)) {
+                    this.FechaCreacionField = value;
+                    this.RaisePropertyChanged("FechaCreacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaModificacion {
+            get {
+                return this.FechaModificacionField;
+            }
+            set {
+                if ((this.FechaModificacionField.Equals(value) != true)) {
+                    this.FechaModificacionField = value;
+                    this.RaisePropertyChanged("FechaModificacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -326,6 +165,41 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
                 }
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UsuarioCreacion {
+            get {
+                return this.UsuarioCreacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioCreacionField, value) != true)) {
+                    this.UsuarioCreacionField = value;
+                    this.RaisePropertyChanged("UsuarioCreacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UsuarioModificacion {
+            get {
+                return this.UsuarioModificacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioModificacionField, value) != true)) {
+                    this.UsuarioModificacionField = value;
+                    this.RaisePropertyChanged("UsuarioModificacion");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -344,11 +218,11 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/UpdateUser", ReplyAction="http://tempuri.org/IAsocService/UpdateUserResponse")]
         System.Threading.Tasks.Task UpdateUserAsync(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/RedUser", ReplyAction="http://tempuri.org/IAsocService/RedUserResponse")]
-        DXWebAsoc.BusinessLogic.WCFService.WCFUsuario RedUser(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/ReadUser", ReplyAction="http://tempuri.org/IAsocService/ReadUserResponse")]
+        DXWebAsoc.BusinessLogic.WCFService.WCFUsuario ReadUser(DXWebAsoc.Model.Entities.Entity user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/RedUser", ReplyAction="http://tempuri.org/IAsocService/RedUserResponse")]
-        System.Threading.Tasks.Task<DXWebAsoc.BusinessLogic.WCFService.WCFUsuario> RedUserAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/ReadUser", ReplyAction="http://tempuri.org/IAsocService/ReadUserResponse")]
+        System.Threading.Tasks.Task<DXWebAsoc.BusinessLogic.WCFService.WCFUsuario> ReadUserAsync(DXWebAsoc.Model.Entities.Entity user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/ReadAllUser", ReplyAction="http://tempuri.org/IAsocService/ReadAllUserResponse")]
         DXWebAsoc.BusinessLogic.WCFService.WCFUsuario[] ReadAllUser();
@@ -357,10 +231,10 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
         System.Threading.Tasks.Task<DXWebAsoc.BusinessLogic.WCFService.WCFUsuario[]> ReadAllUserAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/DeleteUser", ReplyAction="http://tempuri.org/IAsocService/DeleteUserResponse")]
-        void DeleteUser(int id);
+        void DeleteUser(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/DeleteUser", ReplyAction="http://tempuri.org/IAsocService/DeleteUserResponse")]
-        System.Threading.Tasks.Task DeleteUserAsync(int id);
+        System.Threading.Tasks.Task DeleteUserAsync(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -406,12 +280,12 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
             return base.Channel.UpdateUserAsync(user);
         }
         
-        public DXWebAsoc.BusinessLogic.WCFService.WCFUsuario RedUser(int id) {
-            return base.Channel.RedUser(id);
+        public DXWebAsoc.BusinessLogic.WCFService.WCFUsuario ReadUser(DXWebAsoc.Model.Entities.Entity user) {
+            return base.Channel.ReadUser(user);
         }
         
-        public System.Threading.Tasks.Task<DXWebAsoc.BusinessLogic.WCFService.WCFUsuario> RedUserAsync(int id) {
-            return base.Channel.RedUserAsync(id);
+        public System.Threading.Tasks.Task<DXWebAsoc.BusinessLogic.WCFService.WCFUsuario> ReadUserAsync(DXWebAsoc.Model.Entities.Entity user) {
+            return base.Channel.ReadUserAsync(user);
         }
         
         public DXWebAsoc.BusinessLogic.WCFService.WCFUsuario[] ReadAllUser() {
@@ -422,11 +296,11 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
             return base.Channel.ReadAllUserAsync();
         }
         
-        public void DeleteUser(int id) {
+        public void DeleteUser(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario id) {
             base.Channel.DeleteUser(id);
         }
         
-        public System.Threading.Tasks.Task DeleteUserAsync(int id) {
+        public System.Threading.Tasks.Task DeleteUserAsync(DXWebAsoc.BusinessLogic.WCFService.WCFUsuario id) {
             return base.Channel.DeleteUserAsync(id);
         }
     }

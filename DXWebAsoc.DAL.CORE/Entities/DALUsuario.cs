@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using DXWebAsoc.Model.Entities;
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using DXWebAsoc.DAL.DS;
+using Utilities;
 
 namespace DXWebAsoc.DAL.CORE
 {
-    public class DALDivision : DALObject
+    public class DALUsuario : DALObject
     {
+        /*
         #region CRUD
         #region CRUD:Create
         /// <summary>
@@ -47,52 +48,7 @@ namespace DXWebAsoc.DAL.CORE
                 db.ExecuteNonQuery(command, IsolationLevel.ReadCommitted);
             }
         }
-        #endregion
-        #region CRUD:Read
-        /// <summary>
-        /// Read By Id:
-        /// </summary>
-        /// <param name="pId"></param>
-        /// <returns></returns>        
-        public Entity ReadById(Entity pObject) 
-        {
-            // Object
-            Entity oCObject = null;
-            // Execute Instruction
-            using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
-            {                
-                // DataSet: Disconnected data. 
-                DataSet ds = null;
-                // Create Command
-                //OleDbCommand command = new OleDbCommand();
-                SqlCommand command = new SqlCommand();
-                //MySqlCommand command = new MySqlCommand();
-
-                // Define Type of command            
-                //command.CommandType = CommandType.StoredProcedure;            
-                command.CommandType = CommandType.Text;
-                // SQL Instruction
-                string sql = @"SELECT * FROM DIVISION WHERE idDivision = @idDivision";
-                // Set Parameters
-                command.Parameters.AddWithValue("@idDivision",((pObject) as CUsuario).IdDivision);
-                // Set sql instruction
-                command.CommandText = sql;
-                // Execute
-                ds = db.ExecuteReader(command, "query");
-                // Extract table 0
-                DataTable dt = ds.Tables[0];
-                if (dt.Rows.Count>0)
-                {
-                    DataRow dr = dt.Rows[0];
-                    oCObject = this.PopulateObject(dr);
-                }
-                else
-                {
-                    oCObject = null;
-                }
-                return oCObject;
-            }
-        }
+        #endregion        
         /// <summary>
         /// Read All:
         /// </summary>
@@ -211,7 +167,7 @@ namespace DXWebAsoc.DAL.CORE
         public bool Exists(Entity pObject)
         {
             // Object
-            Entity oCObject = this.ReadById(pObject);
+            Entity oCObject = this.Read(pObject);
             // If not is null then true
             if (oCObject!=null)
             {
@@ -223,6 +179,53 @@ namespace DXWebAsoc.DAL.CORE
             }            
         }
         #endregion
+        */
+
+        #region CRUD:Read
+        /// <summary>
+        /// Read By Id:
+        /// </summary>
+        /// <param name="pId"></param>
+        /// <returns></returns>        
+        public Entity Read(Entity pObject)
+        {
+            // Object
+            Entity oCObject = null;
+            // Execute Instruction
+            using (DataBase db = DataBaseFactory.OpenDatabase(base.ConnectionStringName))
+            {
+                // DataSet: Disconnected data. 
+                DataSet ds = null;
+                // Create Command
+                //OleDbCommand command = new OleDbCommand();
+                SqlCommand command = new SqlCommand();
+                //MySqlCommand command = new MySqlCommand();
+
+                // Define Type of command            
+                //command.CommandType = CommandType.StoredProcedure;            
+                command.CommandType = CommandType.Text;
+                // SQL Instruction
+                string sql = @"SELECT * FROM USUARIOS WHERE USUARIO = @USUARIO";
+                // Set Parameters
+                command.Parameters.AddWithValue("@USUARIO", ((pObject) as CUsuario).Usuario);
+                // Set sql instruction
+                command.CommandText = sql;
+                // Execute
+                ds = db.ExecuteReader(command, "query");
+                // Extract table 0
+                DataTable dt = ds.Tables[0];
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow dr = dt.Rows[0];
+                    oCObject = this.PopulateObject(dr);
+                }
+                else
+                {
+                    oCObject = null;
+                }
+                return oCObject;
+            }
+        }
         #region Populate Object
         /// <summary>
         /// PopulateObject:
@@ -235,12 +238,21 @@ namespace DXWebAsoc.DAL.CORE
         public Entity PopulateObject(DataRow dr)
         {
             CUsuario oCObject = new CUsuario();
-            oCObject.IdDivision = Convert.ToInt32(dr["idDivision"]);
+            oCObject.Id = Convert.ToInt32(dr["IdUsuario"]);
+            oCObject.Nombre = Convert.ToString(dr["Nombre"]);
+            oCObject.Usuario = Convert.ToString(dr["Usuario"]);
+            oCObject.Contrasena = Convert.ToString(dr["Contrasena"]);
+            oCObject.Role = EnumUtil.ParseEnum<Role>(Convert.ToString(dr["Rol"]));
+            oCObject.Estado = EnumUtil.ParseEnum<UserState>(Convert.ToString(dr["Estado"]));
             // Checking for NULL
-            if (dr["division"] != DBNull.Value)
-                oCObject.Division = Convert.ToString(dr["division"]);
-            if (dr["description"] != DBNull.Value)
-                oCObject.Descripcion = Convert.ToString(dr["description"]);
+            if (dr["FechaCreacion"] != DBNull.Value)
+                oCObject.FechaCreacion = Convert.ToDateTime(dr["FechaCreacion"]);
+            if (dr["UsuarioCreacion"] != DBNull.Value)
+                oCObject.UsuarioCreacion = Convert.ToString(dr["UsuarioCreacion"]);
+            if (dr["FechaModificacion"] != DBNull.Value)
+                oCObject.FechaModificacion = Convert.ToDateTime(dr["FechaModificacion"]);
+            if (dr["UsuarioModificacion"] != DBNull.Value)
+                oCObject.UsuarioModificacion = Convert.ToString(dr["UsuarioModificacion"]);
 
             // Return
             return oCObject;

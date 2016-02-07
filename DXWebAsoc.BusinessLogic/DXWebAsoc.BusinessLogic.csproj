@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DXWebAsoc.BusinessLogic</RootNamespace>
     <AssemblyName>DXWebAsoc.BusinessLogic</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,9 +32,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,17 +55,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DXWebAsoc.DAL.CORE\DXWebAsoc.DAL.CORE.csproj">
-      <Project>{0f553262-bea0-464c-a390-ee6115774842}</Project>
-      <Name>DXWebAsoc.DAL.CORE</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DXWebAsoc.Model.Classes\DXWebAsoc.Model.Entities.csproj">
       <Project>{24b072dc-560f-47d0-b173-ec51f25874c2}</Project>
       <Name>DXWebAsoc.Model.Entities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{2e475058-35b7-4504-b9e8-d2c03f5d1a46}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -81,9 +82,15 @@
     <None Include="Service References\WCFService\AsocService4.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\WCFService\AsocService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\WCFService\DXWebAsoc.BusinessLogic.WCFService.WCFUsuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\WCFService\" />

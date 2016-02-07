@@ -8,9 +8,14 @@
         <xs:sequence>
           <xs:element minOccurs="0" name="Contrasena" nillable="true" type="xs:string" />
           <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Estado" type="q2:UserState" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaModificacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
           <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
           <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Role" type="q3:Role" />
           <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioModificacion" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
