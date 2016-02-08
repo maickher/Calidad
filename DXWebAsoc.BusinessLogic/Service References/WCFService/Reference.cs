@@ -44,6 +44,12 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/DeleteUser", ReplyAction="http://tempuri.org/IAsocService/DeleteUserResponse")]
         System.Threading.Tasks.Task DeleteUserAsync(WcfService.Services.WCFUsuario id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/ValidateUser", ReplyAction="http://tempuri.org/IAsocService/ValidateUserResponse")]
+        bool ValidateUser(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAsocService/ValidateUser", ReplyAction="http://tempuri.org/IAsocService/ValidateUserResponse")]
+        System.Threading.Tasks.Task<bool> ValidateUserAsync(string username, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +117,14 @@ namespace DXWebAsoc.BusinessLogic.WCFService {
         
         public System.Threading.Tasks.Task DeleteUserAsync(WcfService.Services.WCFUsuario id) {
             return base.Channel.DeleteUserAsync(id);
+        }
+        
+        public bool ValidateUser(string username, string password) {
+            return base.Channel.ValidateUser(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ValidateUserAsync(string username, string password) {
+            return base.Channel.ValidateUserAsync(username, password);
         }
     }
 }

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DXWebAsoc")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Asociados")]
+[assembly: AssemblyDescription("Control de Asistencia Asociados")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("SmarTech Solutions")]
 [assembly: AssemblyProduct("DXWebAsoc")]
 [assembly: AssemblyCopyright("Copyright ? 2016")]
 [assembly: AssemblyTrademark("")]

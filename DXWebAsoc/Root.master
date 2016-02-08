@@ -11,7 +11,7 @@
 </head>
 <body runat="server" id="Body">
     <form id="form1" runat="server">
-        <dx:ASPxPanel ID="HeaderPane" runat="server" FixedPosition="WindowTop" ClientInstanceName="headerPane" CssClass="headerPane" Collapsible="true">
+        <dx:ASPxPanel ID="HeaderPane" runat="server" FixedPosition="WindowTop" ClientInstanceName="headerPane" CssClass="headerPane" Collapsible="True">
             <SettingsAdaptivity CollapseAtWindowInnerWidth="500" />
             <Styles>
                 <Panel CssClass="panel"></Panel>
@@ -22,21 +22,21 @@
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                         <div class="headerTop">
                             <div class="templateTitle">
-                                <a id="TitleLink" href="~/" runat="server">Project Title</a>
+                                <a id="TitleLink" href="~/" runat="server">Asociados</a>
                             </div>
                             <div class="loginControl">
                                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                                     <AnonymousTemplate>
-                                        <a href="~/Account/Login.aspx" runat="server" id="loginLink">Log In</a> 
+                                        <a href="~/Account/Login.aspx" runat="server" id="loginLink">Ingresar</a> 
                                         | 
-                                        <a href="~/Account/Register.aspx" runat="server" id="registerLink">Register</a>
+                                        <!--<a href="~/Account/Register.aspx" runat="server" id="registerLink">Registro</a>-->
                                     </AnonymousTemplate>
                                     <LoggedInTemplate>
-                                        Welcome <span class="bold">
+                                        Bienvenid@ <span class="bold">
                                             <asp:LoginName ID="HeadLoginName" runat="server" />
                                         </span>! [
-                                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
-                                            LogoutPageUrl="~/" />
+                                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Salir" LogoutPageUrl="/Account/Login.aspx" />
+                                            <!--LogoutPageUrl="~/" />-->
                                         ]
                                     </LoggedInTemplate>
                                 </asp:LoginView>
@@ -45,19 +45,13 @@
                         <div class="headerMenu">
                             <%-- DXCOMMENT: Configure the header menu --%>
 <dx:ASPxMenu ID="HeaderMenu" runat="server" CssClass="headerMenu" ClientInstanceName="headerMenu" ItemAutoWidth="False" Width="100%">
-    <Items>
-        <dx:MenuItem Text="Item 1"></dx:MenuItem>
-        <dx:MenuItem Text="Item 2"></dx:MenuItem>
-        <dx:MenuItem Text="Item 3"></dx:MenuItem>
-        <dx:MenuItem Text="Item 4"></dx:MenuItem>
-    </Items>
 </dx:ASPxMenu>
                         </div>
                 </dx:PanelContent>
             </PanelCollection>
             <ExpandBarTemplate>
                 <div class="templateTitle">
-                    <a id="TitleLink" href="~/" runat="server">Project Title</a>
+                    <a id="TitleLink" href="~/" runat="server">Asociados</a>
                 </div>
             </ExpandBarTemplate>
         </dx:ASPxPanel>

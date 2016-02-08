@@ -205,13 +205,14 @@ namespace DXWebAsoc.DAL.CORE
                 //command.CommandType = CommandType.StoredProcedure;            
                 command.CommandType = CommandType.Text;
                 // SQL Instruction
-                string sql = @"SELECT * FROM USUARIOS WHERE USUARIO = @USUARIO";
+                string sql = @"SELECT * FROM USUARIOS WHERE USUARIO = @USUARIO AND CONTRASENA = @CONTRASENA";
                 // Set Parameters
                 command.Parameters.AddWithValue("@USUARIO", ((pObject) as CUsuario).Usuario);
+                command.Parameters.AddWithValue("@CONTRASENA", ((pObject) as CUsuario).Contrasena);
                 // Set sql instruction
                 command.CommandText = sql;
                 // Execute
-                ds = db.ExecuteReader(command, "query");
+                ds = db.ExecuteReader(command, "USUARIO");
                 // Extract table 0
                 DataTable dt = ds.Tables[0];
                 if (dt.Rows.Count > 0)

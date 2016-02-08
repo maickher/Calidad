@@ -30,6 +30,11 @@ namespace WcfService
 
         [OperationContract]
         void DeleteUser(WCFUsuario id);
+        [OperationContract]
+        bool ValidateUser(string username, string password);
+        #endregion
+        #region Role
+        
         #endregion
         #endregion
 

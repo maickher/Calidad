@@ -156,10 +156,7 @@ namespace DXWebAsoc.BLL
             throw new NotImplementedException();
         }
 
-        public override bool ValidateUser(string username, string password)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public override bool UnlockUser(string userName)
         {
@@ -203,8 +200,7 @@ namespace DXWebAsoc.BLL
         #endregion
 
 
-        #region CRUD
-        #region Read
+        #region USED        
         //public MembershipUser ReadUser(CObject entity)/
         public bool ReadUser(CObject entity)
         {
@@ -219,7 +215,14 @@ namespace DXWebAsoc.BLL
             }
             
         }
-        #endregion
+        public override bool ValidateUser(string username, string password)
+        {
+            bool existe = this.servicio.ValidateUser(username, password);
+            if (existe)
+                return true;
+            else
+                return false;
+        }
 
         #endregion
 

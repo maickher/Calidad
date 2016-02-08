@@ -15,20 +15,28 @@
     <Border BorderWidth="0px" />
     <Paddings Padding="0px" />
     <Groups>
-        <dx:NavBarGroup Text="Group 1">
+        <dx:NavBarGroup Text="Eventos">
             <Items>
-                <dx:NavBarItem Text="Item 1"></dx:NavBarItem>
-                <dx:NavBarItem Text="Item 2"></dx:NavBarItem>
-                <dx:NavBarItem Text="Item 3"></dx:NavBarItem>
+                <dx:NavBarItem Text="Control de Eventos"></dx:NavBarItem>
             </Items>
         </dx:NavBarGroup>
-        <dx:NavBarGroup Text="Group 2">
+        <dx:NavBarGroup Text="Asociados">
             <Items>
-                <dx:NavBarItem Text="Item 1"></dx:NavBarItem>
-                <dx:NavBarItem Text="Item 2"></dx:NavBarItem>
-                <dx:NavBarItem Text="Item 3"></dx:NavBarItem>
-                <dx:NavBarItem Text="Item 4"></dx:NavBarItem>
-                <dx:NavBarItem Text="Item 5"></dx:NavBarItem>
+                <dx:NavBarItem Text="Cargar Excel"></dx:NavBarItem>
+            </Items>
+        </dx:NavBarGroup>
+        <dx:NavBarGroup Expanded="False" Text="Asistencia">
+            <Items>
+                <dx:NavBarItem Text="Registrar asistencia">
+                </dx:NavBarItem>
+                <dx:NavBarItem Text="Cierre Mesa">
+                </dx:NavBarItem>
+            </Items>
+        </dx:NavBarGroup>
+        <dx:NavBarGroup Expanded="False" Text="Usuarios">
+            <Items>
+                <dx:NavBarItem Text="Control Usuarios">
+                </dx:NavBarItem>
             </Items>
         </dx:NavBarGroup>
     </Groups>
